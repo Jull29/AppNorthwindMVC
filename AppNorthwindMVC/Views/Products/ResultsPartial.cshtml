@@ -1,0 +1,44 @@
+﻿@model IEnumerable<AppNorthwindMVC.Models.Products>
+
+@{
+    ViewBag.Title = "ResultsPartial";
+}
+
+@if (Model.Count()!=0  )
+{
+    <table>
+        <tr>
+            <th>ProductID</th>
+            <th>ProductName</th>
+            <th>SupplierID</th>
+            <th>CategoryID</th>
+            <th>QuantityPerUnit</th>
+            <th>UnitPrice</th>
+            <th>UnitsInStock</th>
+            <th>UnitsOnOrder</th>
+            <th>ReorderLevel</th>
+            <th>Discontinued</th>
+        </tr>
+        
+        @foreach (var Products in Model)
+	    {
+		    <tr>
+                <td>@Products.ProductID</td>
+                <td>@Products.ProductName</td>
+                <td>@Products.SupplierID</td>
+                <td>@Products.CategoryID</td>
+                <td>@Products.UnitPrice</td>
+                <td>@Products.UnitsInStock</td>
+                <td>@Products.UnitsOnOrder</td>
+                <td>@Products.QuantityPerUnit</td>
+                <td>@Products.ReorderLevel</td>
+                <td>@Products.Discontinued</td>
+
+            </tr>
+	    }
+
+
+
+    </table>
+}
+
